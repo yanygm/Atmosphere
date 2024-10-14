@@ -18,7 +18,7 @@ jobs:
         sudo wget https://apt.devkitpro.org/install-devkitpro-pacman
         sudo chmod +x ./install-devkitpro-pacman
         sudo ./install-devkitpro-pacman
-        sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
+        sudo (dkp-)pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
         pip install lz4 PyCryptodome
 
     - name: Clone Atmosphere repository
