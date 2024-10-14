@@ -13,10 +13,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y devkitA64 Python2 PyCryptodome
+        sudo apt update
+        sudo apt install -y devkitA64 python2
         sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
-        pip install lz4
+        pip install lz4 PyCryptodome
 
     - name: Clone Atmosphere repository
       run: git clone https://github.com/Atmosphere-NX/Atmosphere.git
