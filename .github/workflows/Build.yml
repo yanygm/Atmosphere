@@ -1,0 +1,28 @@
+name: Build Atmosphere
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y devkitpro-pkgbuild-env
+        sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
+        pip install lz4
+
+    - name: Clone Atmosphere repository
+      run: git clone https://github.com/Atmosphere-NX/Atmosphere.git
+
+    - name: Build Atmosphere
+      run: cd Atmosphere && make
