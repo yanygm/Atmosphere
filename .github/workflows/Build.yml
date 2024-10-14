@@ -9,12 +9,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y devkitpro-pkgbuild-env
+        sudo apt-get install -y devkitA64 Python2 PyCryptodome
         sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
         pip install lz4
 
