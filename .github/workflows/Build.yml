@@ -14,7 +14,10 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y "devkit Pro"
+        sudo apt-get install -y wget
+        sudo wget https://apt.devkitpro.org/install-devkitpro-pacman
+        sudo chmod +x ./install-devkitpro-pacman
+        sudo ./install-devkitpro-pacman
         sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
         pip install lz4 PyCryptodome
 
