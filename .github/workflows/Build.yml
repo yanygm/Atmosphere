@@ -13,8 +13,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt update
-        sudo apt install -y devkitA64
+        sudo apt-get update
+        sudo apt-get install -y "devkit Pro"
         sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
         pip install lz4 PyCryptodome
 
