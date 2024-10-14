@@ -14,7 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y devkitA64 python2.7
+        sudo apt install -y devkitA64
         sudo pacman -S switch-dev switch-glm switch-libjpeg-turbo devkitARM devkitarm-rules hactool
         pip install lz4 PyCryptodome
 
